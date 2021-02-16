@@ -114,38 +114,7 @@ function MainFunction() {
   const [nameNewsB,setNameNewsB] = useState();
   const [urlB,setNameUrlB] = useState();
  
-  let sport=[];
-  for(let i;i<list.length;i++) {
-    if(list[i].category==="Sport") {
-      sport.push(list[i]);
-    }
-
-  }
-
-  let business=[];
-  for(let i;i<list.length;i++) {
-    if(list[i].category==="Business") {
-      business.push(list[i]);
-    }
-
-  }
-
-
-  let tech=[];
-  for(let i;i<list.length;i++) {
-    if(list[i].category==="Technology") {
-      tech.push(list[i]);
-    }
-
-  }
-
-  let politics=[];
-  for(let i;i<list.length;i++) {
-    if(list[i].category==="Politics") {
-      politics.push(list[i]);
-    }
-
-  }
+ 
 
 
  const changeName = event=>{
