@@ -18,15 +18,6 @@ const Users = [
   {id: 2, name: 'Maga', password: 'maga'}
 ];
 
-
-
-  
-
-
-
-
-
-
 class MainClass extends React.Component {
   constructor(props) {
     super(props);
@@ -149,10 +140,6 @@ function MainFunction() {
 
  }
 
- function Show(props) {
-   if(document.getElementById(props.number)) {
-   document.getElementById(props.id).style.display='block';}
- }
 
  function List(props) {
    let {pageId} = useParams();
