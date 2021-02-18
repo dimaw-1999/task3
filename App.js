@@ -91,10 +91,17 @@ render() {
 
 
   const initialList = [];
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Elon very clever',img:'elon.jpg',category:'Business'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Elon very clever',img:'elon.jpg',category:'Business'});
-
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Elon very clever',img:'elon.jpg',category:'Sport'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Elon very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Business'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'MAsk very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Business'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'TAsk very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Jask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Lask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Pask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Rask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Yask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Fsk very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Shask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'KAska very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
   const blogs = [];
   blogs.push(  {name:'Alissa Medenova',description:'My name is Alissa,I am reporter,I am twenty seven,I work in Almaty and  I love travelling',img:'rep.jpg'});
   blogs.push(  {name:'Alissa Medenova',description:'My name is Alissa,I am reporter,I am twenty seven,I work in Almaty and  I love travelling',img:'rep.jpg'});
@@ -102,7 +109,8 @@ render() {
   
 
 function MainFunction() {
- 
+
+  
   const [list, setList] = useState(initialList);
   const [name,setName] = useState();
   const [nameNews,setNameNews] = useState();
@@ -114,7 +122,79 @@ function MainFunction() {
   const [nameNewsB,setNameNewsB] = useState();
   const [urlB,setNameUrlB] = useState();
  
- 
+ function Listing(props) {
+   let leng = props.len;
+   let match = useRouteMatch();
+   let number=leng/3;
+   let mps = [];
+   let u=0;
+   for(let i=0;i<number;i++) {
+     mps[u++] = i+1;
+   }
+  return ( <div>
+    {mps.map(number=>(
+      <Router>
+        <Link   className="ml-3" style={{border:'2px solid black'}} to={`${match.url}/${number}`}>{number}
+        </Link>
+        <Switch>
+          <Route path={`${match.path}/:pageId`}>
+            <List lens={props.len}/>
+          </Route>
+        </Switch>
+
+      </Router>
+    ))}
+    </div>
+   );
+
+ }
+
+ function Show(props) {
+   if(document.getElementById(props.number)) {
+   document.getElementById(props.id).style.display='block';}
+ }
+
+ function List(props) {
+   let {pageId} = useParams();
+   let arr = [];
+   let start = pageId*3-3;
+   let end = start+3;
+   if(props.lens<end) {
+     end = props.lens;
+   }
+   for(let i=start;i<end;i++) {
+     arr.push(list[i]);
+   }
+   let u=props.lens;
+   for(let i=1;i<=u;i++) {
+     if(i!=pageId) {
+       if(document.getElementById(i)) {
+       document.getElementById(i).style.display='none';
+          }     }
+   }
+   if(document.getElementById(pageId)) {
+   document.getElementById(pageId).style.display='block';
+   }
+   return (<div id={pageId} >
+    {arr.map(numbers=>(
+      <div  class="card mb-3" style={{maxWidth: '700px',maxHeight:'300px'}}>
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src={numbers.img} style={{width:'150px',marginTop:'10px',marginLeft:'10px'}} alt="..."/>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title" style={{marginLeft:'-50px'}}>{numbers.name}</h5>
+            <p class="card-text" style={{marginLeft:'-50px',marginTop:'-10px'}}>{numbers.description}</p>
+            <p class="card-text" style={{marginTop:'-20px',marginLeft:'80px'}}><small class="text-muted">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    ))}
+    </div>
+   );
+ }
 
 
  const changeName = event=>{
@@ -248,24 +328,9 @@ function MainFunction() {
     <div className="col-7">
     <h5 className="mt-3">All news</h5> 
   <div>
-    {list.map(numbers=>(
-      <div  class="card mb-3" style={{maxWidth: '700px',maxHeight:'300px'}}>
-      <div class="row g-0">
-        <div class="col-md-4">
-          <img src={numbers.img} style={{width:'150px',marginTop:'10px',marginLeft:'10px'}} alt="..."/>
-        </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h5 class="card-title" style={{marginLeft:'-50px'}}>{numbers.name}</h5>
-            <p class="card-text" style={{marginLeft:'-50px',marginTop:'-10px'}}>{numbers.description}</p>
-            <p class="card-text" style={{marginTop:'-20px',marginLeft:'80px'}}><small class="text-muted">Last updated 3 mins ago</small></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    ))}
-    
+    <Listing len = {list.length} />
   </div>
+  
   </div>
   <div className="col-5">
      <h5 className="mt-3">Blogs</h5> 
