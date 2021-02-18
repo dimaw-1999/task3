@@ -91,17 +91,17 @@ render() {
 
 
   const initialList = [];
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Elon very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Business'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'MAsk very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Business'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'TAsk very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Jask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Lask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Pask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Rask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Yask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Fsk very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'Shask very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
-  initialList.push({name:'Eloewfefen Merfeutjturusk',description:'KAska very clever',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Business'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should bewarer',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Business'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Technology'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Technology'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Politics'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Business'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Politics'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Politics'});
+  initialList.push({name:'Elon Mask',description:'A single tweet from Elon Musk can send a stock soaring. Traders should beware',img:'https://static.theceomagazine.net/wp-content/uploads/2018/10/15093202/elon-musk.jpg',category:'Sport'});
   const blogs = [];
   blogs.push(  {name:'Alissa Medenova',description:'My name is Alissa,I am reporter,I am twenty seven,I work in Almaty and  I love travelling',img:'rep.jpg'});
   blogs.push(  {name:'Alissa Medenova',description:'My name is Alissa,I am reporter,I am twenty seven,I work in Almaty and  I love travelling',img:'rep.jpg'});
